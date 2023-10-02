@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container */
+
+.container {
+  background: rgba(28, 28, 28, 1);
+  overflow: hidden;
+  width: 75vmax;
+  height: 45vmax;
+  margin: 1vmax auto;
+  padding: 1vmax;
+  padding-bottom:2vmax;
+  border-radius: 20px;
+  z-index: -999;
+}
+
+.midBlock {
+  z-index: 1;
+  display:flex;
+  margin: auto;
+  justify-content: center;
+}
+
+/* Gallery */
+
+.photoCounter {
+  position: absolute;
+  left:46.5%;
+  font-size: 1vmax;
+  padding: .5vmax;
+  color:rgb(255, 255, 255);
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-weight: bold;
+}
+
+.galleryOutside {
+  display: flex;
+  margin-top: -3vmax;
+  margin-right: 10vmax;
+  margin-left: 10vmax;
+  align-items: center;
+  justify-content: center;
+}
+.galleryContainer {
+  display: block;
+  background-color: rgba(116, 96, 96, 0.2);
+  border-radius: 20px;
+  max-width: 44vmax;
+  margin-top:2.5vmax;
+}
+.galleryPhotos {
+  height: 7vmax;
+  width: 9vmax;
+  margin: 1vmax;
+  border-radius: 20px;
+}
+
+.galleryPopoutContainer {
+  z-index: 999;
+  position: relative;
+}
+.galleryPopout {
+  z-index: 999;
+  position:absolute;
+  top:-10vmax;
+  left:-5vmax;
+  height: 50vmax;
+  width: 80vmax;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.galleryPopoutImage {
+  z-index: 999;
+  width: 50vmax;
+  height: 38.5vmax;
+}
+.galleryPopoutImageContainer {
+  position:absolute;
+  left:20%;
+  top:15%;
+}
+.galleryPopoutX {
+  z-index: 999;
+  top:5%;
+  left:15%;
+  position:absolute;
+  background: rgb(116, 116, 116,0.2);
+  padding: 1vmax;
+  border: none;
+  margin: .8vmax;
+  border-radius: 20px;
+  color: white;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-weight: bold;
+}
+
+/* Carroussel */
+
+.carrousselPhotos {
+  height: 4vmax;
+  width: 5vmax;
+  margin: .5vmax;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+}
+
+.carrousselMainPhoto {
+  z-index: 1;
+  max-width: 33vmax;
+  max-height: 20vmax;
+  min-height: 20vmax;
+  min-width: 33vmax;
+  object-fit:fill;
+  border-radius: 20px;
+  margin: 0; 
+  margin-bottom: 2vmax;
+}
+
+.carrousselUpper {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  justify-content: center;
+  object-fit: fill;
+  margin-bottom: -0.8vmax;
+}
+.carrousselLower {
+  display: table;
+  background: rgba(48, 48, 48, 0.5);
+  border-radius: 20px;
+  padding: 1vmax;
+  padding-bottom: 2.1vmax;
+  align-items: center;
+  margin: auto;
+  justify-content: center;
+  object-fit: fill;
+}
+
+.btn_carroussel {
+  background: rgb(116, 116, 116,0.2);
+  padding: 1vmax;
+  border: none;
+  margin: .8vmax;
+  border-radius: 20px;
+  color: white;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-weight: bold;
+}
+.btn_carroussel:hover {
+  background: rgb(68, 68, 68);
+}
+
+/* Idk honestly ............................................................................................. */
+.btn {
+  position: absolute;
+  right: 15vmax;
+  top: 1.8vmax;
+  z-index: 0;
+  background: rgb(116, 116, 116,0.2);
+  padding: .5vmax;
+  border: none;
+  margin: .8vmax;
+  border-radius: 20px;
+  color: white;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-weight: bold;
+}
+.btn .line {
+  display: inline-flex;
+  width: .4vmax;
+  border-radius: 20px;
+  height: 1vmax;
+  margin: .15vmax;
+  background-color: rgb(255, 255, 255);
+  transition-duration: 0.8s;
+  transition-property: transform;
+}
+.btn .line1 {
+  display: inline-flex;
+  background-color: rgb(255, 255, 255);
+  width: .4vmax;
+  border-radius: 20px;
+  height: 1vmax;
+  margin: .15vmax;
+  transition-property: transform;
+  transition-duration: 0.8s;
+  transform: rotate(90deg) scaleX(4) scaleY(.5); -webkit-transform: rotate(90deg) scaleX(2.5) scaleY(1.3) translateY(-.5vmax) translateX(-.1vmax);
+}
+.btn .line2 {
+  display: inline-flex;
+  background-color: rgb(255, 255, 255);
+  width: .4vmax;
+  border-radius: 20px;
+  height: 1vmax;
+  margin: .15vmax;
+  transition-duration: 0.8s;
+  transition-property: transform;
+  transform: rotate(90deg) scaleX(-3); -webkit-transform: rotate(90deg) scaleY(0.6) translateX(.8vmax) translateY(.5vmax);
+}
+
+/* Nav Bar */
+
+.navBarContainer {
+  position:sticky;
+  display: inline-block;
+  background: rgba(116, 96, 96, 0.2);
+  left:50vmax;
+  margin-bottom: -2.5vmax;
+  margin-top: 0vmax;
+  z-index: 0;
+  max-width: fit-content;
+  max-height: 3vmax;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.navBarBtn {
+  background: rgb(116, 116, 116,0.2);
+  border: none;
+  text-align: center;
+  font-size: 1vmax;
+  padding: 1vmax;
+  color:rgb(255, 255, 255);
+  font-family:'PT Sans Narrow', sans-serif;
+  font-weight: bold;
+  opacity: 100%;
+}
+.navBarBtn:hover {
+  background: rgb(68, 68, 68);
+}
+
+/* Texts */
+
+.header {
+  z-index: 1;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  font-size: 2.5vmax;
+  color:rgb(255, 255, 255);
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-weight: bold;
+}
+
+.solCounter {
+  z-index: 1;
+  display: block;
+  text-align: center;
+  font-size: .9vmax;
+  color:rgba(255, 110, 5, 1);
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-weight: bold;
+}
+
+.captions {
+  text-align:left;
+  margin-top: 1.5vmax;
+  margin-left:1.6vmax;
+  margin-bottom: -1vmax;
+  font-size: 1.3vmax;
+  padding: .5vmax;
+  color:rgb(255, 255, 255);
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-weight: bold;
+}
+
+.info {
+  margin: auto;
+  text-align: left;
+  margin-left: 1.5vmax;
+  margin-right: 5vmax;
+  margin-bottom: -0.5vmax;
+  font-size: 1.3vmax;
+  max-width: 25vmax;
+  padding: .5vmax;
+  color:rgba(147, 147, 147, 1);
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.links {
+  color:rgba(94, 94, 94, 1);
+  font-size:1vmax;
+  font-family:'PT Sans Narrow', sans-serif;
+  font-weight: bold;
+  margin:2vmax;
+  margin-top:0;
+  z-index: 1;
+  text-decoration-line:underline;
+}
+.links:visited {
+  color: rgba(94, 94, 94, 1);
+}
+
+
+.photo {
+  z-index: 1;
+  max-width: 35vmax;
+  max-height: 25vmax;
+  min-height: 25vmax;
+  min-width: 35vmax;
+  object-fit: cover;
+  border-radius: 20px;
+  margin: auto; 
+  margin-top:2vmax;
+  margin-bottom: 2vmax;
+}
+
+/* Map*/
+
+.mapContainer {
+  display: flex;
+  overflow: hidden;
+  margin:2vmax;
+}
+
+.map {
+  z-index: 1;
+  overflow: hidden;
+  max-width: 60vmax;
+  max-height: 30vmax;
+  border-radius: 20px;
+}
+
+.btnReset {
+  z-index: 0;
+  background: rgba(255, 255, 255);
+  border: none;
+  position:relative;
+  overflow: none;
+  left:5%;
+  top:88%;
+  height:10%;
+  width:10%;
+  margin:-1vmax;
+  margin-left:0;
+  border-radius: 20px;
+  color: white;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-weight: bold;
+}
+.btnReset:active {
+  background: rgb(131, 131, 131);
+}
+
+/* Rover 3D model */
+.rover {
+  display: block;
+  border-radius:20px;
+  border: none;
+  overflow:hidden;
+  margin: 3vmax;
+  width: 35vmax;
+  height: 27vmax;
+}
+
+
+/* Photos */
+.nasaLogo {
+  position: absolute;
+  left:48.5%;
+  bottom:6vmax;
+  width: 3vmax;
+}
