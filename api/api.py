@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 import requests as rq
-from fastapi import FastAPI
+from flask import Flask
 
 def getManifestData(url): # gets manifest data
     manifestData = rq.get(url).json()
@@ -76,8 +76,8 @@ data = {
 }
 
 #print(data)
+app = Flask(__name__)
 
-app = FastAPI()
 @app.get("/")
-async def root():
+def root():
     return data
