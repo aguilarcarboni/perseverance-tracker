@@ -66,6 +66,5 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 
 @app.route("/")
 @cross_origin()
-@app.get("/")
 def root():
     return data
