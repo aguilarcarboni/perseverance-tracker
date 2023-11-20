@@ -6,6 +6,10 @@
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^29.5.8",
+    "@types/node": "^20.9.2",
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
     "chart.js": "^3.7.1",
     "papaparse": "^5.3.2",
     "pigeon-maps": "^0.21.0",
@@ -21,6 +25,7 @@
     "react-vis-updated": "^1.11.11",
     "react-xarrows": "^2.0.2",
     "recharts": "^2.1.9",
+    "typescript": "^5.2.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -35,6 +40,10 @@
       "react-app/jest"
     ]
   },
+  "eslintIgnore": [
+    "node_modules",
+    "build/*"
+  ],
   "browserslist": {
     "production": [
       ">0.2%",
