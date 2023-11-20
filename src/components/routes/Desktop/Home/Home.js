@@ -11,7 +11,7 @@ const Home = () => {
   
   var [data,setData] = useState([])
 
-  const {dats} = useFetch('https://perseverance-tracker.onrender.com/data', 3)
+  const {dats} = useFetch('https://perseverance-tracker.onrender.com', 3)
 
   useEffect(() => {
     Papa.parse('Assets/CSV/waypoints.csv', {

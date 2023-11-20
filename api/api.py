@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import requests as rq
 from flask import Flask
-from flask_cors import CORS
+from flask_cors import CORS, cross_origin
 
 def getManifestData(url): # gets manifest data
     manifestData = rq.get(url).json()
@@ -61,8 +61,11 @@ data = {
 
 #print(data)
 app = Flask(__name__)
-CORS(app, origins=["http://localhost:3000"])
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
+@app.route("/")
+@cross_origin()
 @app.get("/")
 def root():
     return data
