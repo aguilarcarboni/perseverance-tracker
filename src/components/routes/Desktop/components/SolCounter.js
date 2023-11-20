@@ -1,6 +1,4 @@
 import React from 'react'
-import { useState, useEffect } from 'react';
-import Papa from 'papaparse'
 
 const SolCounter = () => {
     const sol = 585;

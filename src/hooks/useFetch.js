@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import { fetchTypes } from '../utils/types.ts'
 
@@ -39,3 +39,5 @@ const useFetch = (type) => {
 }
 
 export default useFetch
+
+export const dynamic = "force-dynamic"

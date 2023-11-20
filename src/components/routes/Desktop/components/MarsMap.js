@@ -1,8 +1,6 @@
 import React, { useState }  from 'react'
 
 import useFetch from "../../../../hooks/useFetch.js"
-import LoadingComponent from '../components/LoadingComponent.js';
-import ErrorComponent from '../components/ErrorComponent.js';
 
 import { fetchTypes } from "../../../../utils/types.ts"
 
