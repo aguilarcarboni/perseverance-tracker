@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from 'react'
 
-const useFetch = (url, type) => {
+import { fetchTypes } from '../utils/types.ts'
 
-    const [data, setData] = useState(null)
+const useFetch = (type) => {
+
+    const url = process.env.REACT_APP_FETCH_URL
+
+    const [data, setData] = useState([])
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState(false)
      
@@ -19,7 +23,8 @@ const useFetch = (url, type) => {
                         },
                     }
                 );
-                console.log(response)
+                const data = await response.json();
+                setData(type === fetchTypes.COORDS ? data.coords:data.images)
             } catch(e) {
                 setError(true)
                 console.error(e)
@@ -30,7 +35,7 @@ const useFetch = (url, type) => {
         GET()
     }, [url, type])
 
-    return {data}
+    return {data, loading, error}
 }
 
 export default useFetch

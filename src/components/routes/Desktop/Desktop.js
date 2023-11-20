@@ -5,9 +5,9 @@ import Navbar from './components/Navbar'
 import SolCounter from './components/SolCounter'
 
 import Home from './Home/Home'
-import AboutDesktop from './About/AboutDesktop'
-import MapDesktop from './Map/MapDesktop'
-import PhotosDesktop from './Photos/PhotosDesktop'
+import About from './About/About'
+import Map from './Map/Map'
+import Photos from './Photos/Photos'
 import Footer from './components/Footer'
 
 const Desktop = () => {
@@ -26,9 +26,9 @@ const Desktop = () => {
     </div>
     <Routes>
       <Route path='/' element={<Home />} />
-      <Route path='/aboutD' element={<AboutDesktop />} />
-      <Route path='/mapD' element={<MapDesktop />} />
-      <Route path='/photosD' element={<PhotosDesktop />} />
+      <Route path='/aboutD' element={<About />} />
+      <Route path='/mapD' element={<Map />} />
+      <Route path='/photosD' element={<Photos />} />
     </Routes>
     <Footer/>
   </BrowserRouter>

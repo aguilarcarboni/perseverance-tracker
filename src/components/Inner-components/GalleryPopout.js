@@ -1,13 +1,11 @@
 import React from 'react'
 
-const GalleryPopout = ({url}) => {
-  console.log(url)
+const GalleryPopout = ({selected, setSelected}) => {
   return (
-    <div className='galleryPopoutContainer'>
-      <div className='galleryPopout'>
-        <div className='galleryPopoutImageContainer'>
-          <img src={url} alt='current'className='galleryPopoutImage'></img>
-        </div>
+    <div className='popoutContainer' onClick={() => setSelected(null)}>
+      <btn className='exitButton' onClick={() => setSelected(null)}>X</btn>
+      <div className='popout'>
+        <img src={selected} alt='current' className='photo'></img>
       </div>
     </div>
   )

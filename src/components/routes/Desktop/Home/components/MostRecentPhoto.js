@@ -1,34 +1,29 @@
-import { useEffect, useState } from 'react';
-import Papa from 'papaparse'
-import { Link } from 'react-router-dom';
+import React from "react"
+
+import useFetch from "../../../../../hooks/useFetch"
+import { fetchTypes } from "../../../../../utils/types.ts"
+import LoadingComponent from "../../components/LoadingComponent.js"
+import ErrorComponent from "../../components/ErrorComponent.js"
 
 const MostRecentPhoto = () => {
-  var [url,setURL] = useState([])
+  const {data, loading, error} = useFetch(fetchTypes.IMAGES)
 
-  const onClick = () => {
-    console.log('Click');
-  } 
- 
-  useEffect(() => {
-    Papa.parse('Assets/CSV/imageData.csv', {
-    header: true,
-    skipEmptyLines: true,
-    download: true,
-    complete: function (results) {
-        var arr = []
-        var tempData = results.data
-        arr.push(tempData[tempData.length-1]['urls'])
-        setURL(arr)
-      },
-    });
-  },[]);
-
-  return (
-    <div>
-      <h2 className='captions' style={{textAlign:'center',marginLeft:-10}}>Most recent photo</h2>
-      <img className='photo' onClick={onClick} src={url} alt='Most recent'/> 
-    </div>
-  )
+  if (loading) {
+    return (
+      <LoadingComponent/>
+    )
+  } else if (error) {
+    return (
+      <ErrorComponent />
+    )
+  }
+  else {
+    return (
+      <div className="photoContainer">
+        <img className='photo' src={data[0]} alt='Most recent'/>
+      </div>
+    )
+  }
 }
 
 export default MostRecentPhoto
