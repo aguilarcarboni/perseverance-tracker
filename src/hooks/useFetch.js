@@ -15,7 +15,7 @@ const useFetch = (url, type) => {
                         method: "GET",
                         mode: "cors",
                         headers: {
-                            'Access-Control-Allow-Origin': '*'
+                            'Access-Control-Allow-Origin': `http://localhost:3000`
                         },
                     }
                 );
