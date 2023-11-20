@@ -1,30 +1,165 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap');
+/* Container */
+
+::-webkit-scrollbar {
+  display: none;
+}
 
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* Container */
+/* * {
+  outline: red dotted 0.1vmax;
+} */
 
-.container {
-  background: rgba(28, 28, 28, 1);
-  overflow: hidden;
-  width: 75vmax;
-  height: 45vmax;
-  margin: 1vmax auto;
-  padding: 1vmax;
-  padding-bottom:2vmax;
-  border-radius: 20px;
-  z-index: -999;
+html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(12, 12, 12, 1);
+  height: 100vh;
+  width: 100%;
+  background-image: url('./assets/images//stars.png');
 }
 
-.midBlock {
+body {
+  margin: 0;
+  height: 95%;
+  width: 95%;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+h1 {
+  font-size: 4vmax;
+  color:rgb(255, 255, 255);
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.3vmax;
+  color:rgb(255, 255, 255);
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1vmax;
+  color:rgb(255, 255, 255);
+  font-family: 'PT Sans Narrow', sans-serif;  
+}
+
+h4 {
+  font-size: 0.8vmax;
+  color:rgb(255, 255, 255);
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-weight: bold;
+}
+
+p {
+  font-size: 0.5vmax;
+  color: white;
+  font-family:'PT Sans Narrow', sans-serif;
+  font-weight: bold
+}
+
+button {
+  border: none;
+  background-color: rgba(0,0,0,0);
+  color: white;
+  font-family:'PT Sans Narrow', sans-serif;
+  font-weight: bold
+}
+
+.link {
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+
+.container {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  .title {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    .solCounter {
+      color:rgba(255, 110, 5, 1);
+    }
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: fit-content;
+    width: 20vw;
+    overflow: hidden;
+    .link {
+      cursor: pointer;
+      height: fit-content;
+      width: fit-content;
+      .text {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  position: absolute;
+  margin: 0 0 1vh 0;
+  bottom: 0;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  .nasaLogo {
+    width: 3vw;
+  }
+}
+
+
+
+.homeContainer {
   z-index: 1;
+  height: 100%;
+  width: 100%;
   display:flex;
   margin: auto;
   justify-content: center;
+  .intro {
+    gap: 5vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    .map {
+      z-index: 1;
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+    }    
+  }
+  .recentPhoto {
+    height: 100%;
+    width: 100%;
+  }
 }
 
 /* Gallery */
@@ -206,34 +341,6 @@
 
 /* Nav Bar */
 
-.navBarContainer {
-  position:sticky;
-  display: inline-block;
-  background: rgba(116, 96, 96, 0.2);
-  left:50vmax;
-  margin-bottom: -2.5vmax;
-  margin-top: 0vmax;
-  z-index: 0;
-  max-width: fit-content;
-  max-height: 3vmax;
-  border-radius: 20px;
-  overflow: hidden;
-}
-
-.navBarBtn {
-  background: rgb(116, 116, 116,0.2);
-  border: none;
-  text-align: center;
-  font-size: 1vmax;
-  padding: 1vmax;
-  color:rgb(255, 255, 255);
-  font-family:'PT Sans Narrow', sans-serif;
-  font-weight: bold;
-  opacity: 100%;
-}
-.navBarBtn:hover {
-  background: rgb(68, 68, 68);
-}
 
 /* Texts */
 
@@ -249,26 +356,12 @@
   font-weight: bold;
 }
 
-.solCounter {
-  z-index: 1;
-  display: block;
-  text-align: center;
-  font-size: .9vmax;
-  color:rgba(255, 110, 5, 1);
-  font-family: 'PT Sans Narrow', sans-serif;
-  font-weight: bold;
-}
-
 .captions {
   text-align:left;
   margin-top: 1.5vmax;
   margin-left:1.6vmax;
   margin-bottom: -1vmax;
-  font-size: 1.3vmax;
-  padding: .5vmax;
-  color:rgb(255, 255, 255);
-  font-family: 'PT Sans Narrow', sans-serif;
-  font-weight: bold;
+
 }
 
 .info {
@@ -313,21 +406,6 @@
 }
 
 /* Map*/
-
-.mapContainer {
-  display: flex;
-  overflow: hidden;
-  margin:2vmax;
-}
-
-.map {
-  z-index: 1;
-  overflow: hidden;
-  max-width: 60vmax;
-  max-height: 30vmax;
-  border-radius: 20px;
-}
-
 .btnReset {
   z-index: 0;
   background: rgba(255, 255, 255);
@@ -358,13 +436,4 @@
   margin: 3vmax;
   width: 35vmax;
   height: 27vmax;
-}
-
-
-/* Photos */
-.nasaLogo {
-  position: absolute;
-  left:48.5%;
-  bottom:6vmax;
-  width: 3vmax;
 }

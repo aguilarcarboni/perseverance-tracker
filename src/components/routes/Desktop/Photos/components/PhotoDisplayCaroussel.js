@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
-import CarrousselBtn from './CarrousselBtn';
+import CarrousselBtn from '../../../../Inner-components/CarrousselBtn';
 
 const PhotoDisplayCar = ({data,showCarroussel}) => {
     var [index,setIndex] = useState(0)

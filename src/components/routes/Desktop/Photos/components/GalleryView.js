@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import CarrousselBtn from './CarrousselBtn'
-import GalleryPopout from './GalleryPopout'
+import CarrousselBtn from '../../../../Inner-components/CarrousselBtn'
+import GalleryPopout from '../../../../Inner-components/GalleryPopout'
 
 const PhotosToggle = ({data}) => {
 

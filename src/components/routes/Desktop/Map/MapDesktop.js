@@ -1,10 +1,9 @@
 import React from 'react'
-import Papa from 'papaparse'
 import { useState, useEffect } from 'react'
-import NavBar from '../Inner-components/NavBar'
-import Header from '../Inner-components/Header'
-import { Link } from 'react-router-dom'
-import Map from '../Inner-components/Map'
+
+import Papa from 'papaparse'
+
+import Map from '../Home/components/MarsMap'
 
 const MapDesktop = () => {
   const [data, setData] = useState([])
@@ -29,10 +28,6 @@ const MapDesktop = () => {
 
   return (
     <div className={'container'} style={{backgroundImage: "url(Assets/IMG/map.png)", backgroundSize:'cover'}}>
-      <NavBar />
-      <Link to='/' style={{textDecoration:'none'}}>
-      <Header />
-      </Link>
       <div className='mapContainer' style={{marginLeft:'12vmax'}}> 
         <Map data = {data} height={'30vmax'} width={'50vmax'}/>
       </div>

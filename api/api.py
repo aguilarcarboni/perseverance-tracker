@@ -40,29 +40,12 @@ def getDistance(coordsJson):
     distances = np.array(distances)
     distances = pd.DataFrame(distances) #data frame
     return distances
-    
-#Images dataframe
-def getimagesJson():
-    #imagesDF.to_csv('/Users/aguilarcarboni/Desktop/Coding/CTDS/NASA/React/public/Assets/CSV/imageData.csv',index = False)
-    #imagesDF.to_csv('C:/Users/Agui/Desktop/Coding/NASA/React/public/Assets/CSV/imageData.csv',index = False)
-    #imagesDF.to_csv('/home/andres/React/public/Assets/CSV/imageData.csv', index = False)
-    return 
-
-#Coordinates dataframe
-def getCoordinateData():
-    #CSV
-    #coordsJson.to_csv('/Users/aguilarcarboni/Desktop/Coding/CTDS/NASA/React/public/Assets/CSV/waypoints.csv',index = False) #coords csv
-    #coordsJson.to_csv('C:/Users/Agui/Desktop/Coding/NASA/React/public/Assets/CSV/waypoints.csv',index = False)
-    #coordsJson.to_csv('/home/andres/React/public/Assets/CSV/coordsJson.csv', index = False)
-    return
-
 
 #Main
 manifestUrl = 'https://api.nasa.gov/mars-photos/api/v1/manifests/perseverance/?api_key=kQwoyoXi4rQeY0lXWt1RZln6mLeatlYKLmYfGENB'
 manifest = getManifestData(manifestUrl)
 
 sol = getSol(manifest)
-
 
 imagesUrl = 'https://api.nasa.gov/mars-photos/api/v1/rovers/perseverance/photos?sol='+ str(sol) + '&api_key=kQwoyoXi4rQeY0lXWt1RZln6mLeatlYKLmYfGENB'
 waypointsUrl = 'https://mars.nasa.gov/mmgis-maps/M20/Layers/json/M20_waypoints.json'

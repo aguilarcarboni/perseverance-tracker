@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import Papa from 'papaparse'
 import { Link } from 'react-router-dom';
 
-const DailyPhoto = () => {
+const MostRecentPhoto = () => {
   var [url,setURL] = useState([])
 
   const onClick = () => {
@@ -17,7 +17,6 @@ const DailyPhoto = () => {
     complete: function (results) {
         var arr = []
         var tempData = results.data
-        console.log(tempData)
         arr.push(tempData[tempData.length-1]['urls'])
         setURL(arr)
       },
@@ -26,12 +25,10 @@ const DailyPhoto = () => {
 
   return (
     <div>
-        <Link to="/photosD" style ={{textDecoration: 'none'}}>
-          <h1 className='captions' style={{textAlign:'center',marginLeft:-10}}>Most recent photo</h1>
-        </Link>
+      <h2 className='captions' style={{textAlign:'center',marginLeft:-10}}>Most recent photo</h2>
       <img className='photo' onClick={onClick} src={url} alt='Most recent'/> 
     </div>
   )
 }
 
-export default DailyPhoto
+export default MostRecentPhoto

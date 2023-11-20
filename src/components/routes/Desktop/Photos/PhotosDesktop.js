@@ -1,13 +1,11 @@
 import React from 'react'
 import { useEffect, useState } from 'react';
+
 import Papa from 'papaparse';
-import NavBar from '../Inner-components/NavBar'
-import PhotoDisplayCaroussel from '../Inner-components/PhotoDisplayCaroussel';
-import Header from '../Inner-components/Header'
-import PhotosToggle from '../Inner-components/PhotosToggle';
-import GalleryView from '../Inner-components/GalleryView'
-import SolCounter from '../Inner-components/SolCounter'
-import { Link } from 'react-router-dom';
+
+import PhotoDisplayCaroussel from './components/PhotoDisplayCaroussel';
+import PhotosToggle from './components/PhotosToggle';
+import GalleryView from './components/GalleryView'
 
 const PhotosDesktop = () => {
   var [data, setData] = useState([])
@@ -40,11 +38,6 @@ const PhotosDesktop = () => {
 
   return (
     <div className={'container'} style={{backgroundImage: "url(Assets/IMG/photos.png)", backgroundSize: 'cover'}}>
-      <NavBar />
-      <Link to='/' style={{textDecoration:'none'}}>
-        <Header />
-      </Link>
-      <SolCounter />
         <PhotosToggle onClick = {handleChange} showCarroussel = {showCarroussel}/>
         {showCarroussel ? <PhotoDisplayCaroussel data = {data} showCarroussel={showCarroussel}/>:<GalleryView data = {data}/>}
       <img className = 'nasaLogo' src={'Assets/IMG/nasaLogo.png'} alt="Nasa Logo"/>
