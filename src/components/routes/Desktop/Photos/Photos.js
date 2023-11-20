@@ -9,7 +9,7 @@ import { fetchTypes } from '../../../../utils/types.ts';
 
 import Carousel from './components/Carousel.js';
 import Toggler from './components/Toggler.js';
-import GalleryView from './components/Gallery.js'
+import Gallery from './components/Gallery.js'
 
 const Photos = () => {
   const {data, loading, error} = useFetch(fetchTypes.IMAGES)
@@ -27,7 +27,7 @@ const Photos = () => {
     return (
       <div className='photosContainer'>
         <Toggler onClick = {() => setShowCarroussel(!showCarroussel)} showCarroussel = {showCarroussel}/>
-        {showCarroussel ? <Carousel data = {data}/>:<GalleryView data = {data}/>}
+        {showCarroussel ? <Carousel data = {data}/>:<Gallery data = {data}/>}
         </div>
     )
   }

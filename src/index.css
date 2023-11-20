@@ -174,11 +174,11 @@ button {
     align-items: center;
     justify-content: center;
     .photoContainer {
+      height: 100%;
       overflow: hidden;
       border-radius: 2vmax;
       .photo {
         width: 100%;
-        transform: scale(1.5);
         height: 100%;
       }
     }
@@ -224,6 +224,9 @@ button {
     justify-content: flex-end;
   }
   .carouselContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
     height: fit-content;
     justify-content: center;
@@ -260,6 +263,9 @@ button {
     }
   }
   .galleryContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     .main {
       display: flex;
       align-items: center;

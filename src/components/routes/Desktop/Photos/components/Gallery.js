@@ -38,7 +38,7 @@ const Gallery = ({data}) => {
         <ArrowButton onClick = {previousPage} direction = {'left'}/>
         <div className='gallery'>
             {data.map((photo,count) => count < number+12 && count > number-1 && 
-              <img  className = 'photo' src={photo} alt={count} onClick = {() => setSelected(photo)}></img>
+              <img key = {count} className = 'photo' src={photo} alt={count} onClick = {() => setSelected(photo)}></img>
             )}
         </div>
         <ArrowButton onClick = {nextPage} direction = {'right'}/>
