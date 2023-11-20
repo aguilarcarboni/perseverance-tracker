@@ -8,6 +8,8 @@ import ErrorComponent from "../../components/ErrorComponent.js"
 const MostRecentPhoto = () => {
   const {data, loading, error} = useFetch(fetchTypes.IMAGES)
 
+  console.log(data)
+
   if (loading) {
     return (
       <LoadingComponent/>

@@ -16,7 +16,7 @@ const Home = () => {
         <MarsMap height={'50%'} width={'100%'}/>
       </div>
       <div className='recentPhoto'>
-        <h2 className='captions'>Most recent photo</h2>
+        <h2 className='title'>Most recent photo</h2>
         <MostRecentPhoto /> 
       </div>
     </div>
