@@ -13,7 +13,7 @@ const Home = () => {
         <Link className='link' to="/aboutD">
           <h4 className='subtitle' href=''>Learn more.</h4>
         </Link>
-        <MarsMap height={'50%'} width={'100%'}/>
+        <MarsMap height={'60%'} width={'100%'}/>
       </div>
       <div className='recentPhoto'>
         <h2 className='title'>Most recent photo</h2>

@@ -22,8 +22,7 @@ const Photos = () => {
     return (
       <ErrorComponent />
     )
-  }
-  else {
+  } else {
     return (
       <div className='photosContainer'>
         <Toggler onClick = {() => setShowCarroussel(!showCarroussel)} showCarroussel = {showCarroussel}/>
