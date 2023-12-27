@@ -1,8 +1,17 @@
 import React, { useState } from 'react'
+
+import useFetch from '../../../../../hooks/useFetch'
+import LoadingComponent from '../../components/LoadingComponent.js';
+import ErrorComponent from '../../components/ErrorComponent.js';
+
+import { fetchTypes } from '../../../../../utils/types.ts';
+
 import ArrowButton from '../../../../Inner-components/ArrowButton'
 import GalleryPopout from '../../../../Inner-components/GalleryPopout'
 
-const Gallery = ({data}) => {
+const Gallery = () => {
+
+  const {data, loading, error} = useFetch(fetchTypes.IMAGES)
 
   const [number,setNum] = useState(0)
   const [page, setPage] = useState(0)
@@ -31,21 +40,31 @@ const Gallery = ({data}) => {
     }
   }
 
-  return (
-    <div className='galleryContainer'>
-      {selected && <GalleryPopout selected = {selected} setSelected={setSelected}/>}
-      <div className = 'main'>
-        <ArrowButton onClick = {previousPage} direction = {'left'}/>
+  if (loading) {
+    return (
+      <LoadingComponent/>
+    )
+  } else if (error) {
+    return (
+      <ErrorComponent />
+    )
+  } else {
+    return (
+      <div className='galleryContainer'>
+        {selected && <GalleryPopout selected = {selected} setSelected={setSelected}/>}
         <div className='gallery'>
             {data.map((photo,count) => count < number+12 && count > number-1 && 
               <img key = {count} className = 'photo' src={photo} alt={count} onClick = {() => setSelected(photo)}></img>
             )}
         </div>
-        <ArrowButton onClick = {nextPage} direction = {'right'}/>
+        <div className='pagination'>
+          <ArrowButton onClick = {previousPage} direction = {'left'}/>
+          <h3 className='subtitle'>Page {page+1} of {Math.floor(data.length/12)+1} </h3>
+          <ArrowButton onClick = {nextPage} direction = {'right'}/>
+        </div>
       </div>
-      <h3 className='subtitle'>Page {page+1} of {Math.floor(data.length/12)+1} </h3>
-    </div>
-  )
+    )
+  }
 }
 
 export default Gallery

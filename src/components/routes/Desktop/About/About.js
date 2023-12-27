@@ -10,7 +10,10 @@ const About = () => {
         <h3 className='subtitle'>Perseverance will look for evidence of past and current life on Mars, as well as test new technology that can benefit future human journeys to the planet.</h3>
         <a target="_blank" rel='noreferrer' className='link' href="https://mars.nasa.gov/mars2020/">Learn more information about Perse</a>
       </div>
-      <iframe className = 'rover' src="https://mars.nasa.gov/gltf_embed/25042" title='3D Model'/>
+      <div className='rover'>
+        <h2 className='title'>3D Model</h2>
+        <iframe className ='model' src="https://mars.nasa.gov/gltf_embed/25042" title='3D Model'/>
+      </div>
     </div>
   )
 }

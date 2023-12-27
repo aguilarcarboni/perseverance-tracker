@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div className='container'>
-      {height < width ? <Desktop />:<h1>{height}</h1>}
+      {height <= width ? <Desktop />:<h1>{height} {width}</h1>}
     </div>
   )
 }

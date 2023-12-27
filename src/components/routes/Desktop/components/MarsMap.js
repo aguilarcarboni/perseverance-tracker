@@ -11,7 +11,7 @@ const MarsMap = ({width, height}) => {
   const {data, loading, error} = useFetch(fetchTypes.COORDS)
   
   const [center, setCenter] = useState([18.445, 77.44])
-  const [zoom, setZoom] = useState(12)
+  const [zoom, setZoom] = useState(5)
   const maxZoom = 15
   const minZoom = 3
 
@@ -39,7 +39,7 @@ const MarsMap = ({width, height}) => {
         )}
         <ZoomControl />
         <button className='btnReset' onClick={resetView}>
-          <img style={{width:'40%'}} src="Assets/IMG/mapCenter.png" alt='Center Map'/>
+          <p>Go to perse!</p>
         </button>
       </Map>
     </div>

@@ -4,9 +4,9 @@
   display: none;
 }
 
-* {
+/* * {
   outline: red dotted 0.1vmax;
-}
+} */
 
 * {
   margin: 0;
@@ -20,8 +20,8 @@ html {
   background: rgba(12, 12, 12, 1);
   height: 100vh;
   width: 100%;
-  background-image: url('./assets/images//stars.png');
-  background-size: cover;
+  background-image: url('./assets/images/stars.jpg');
+  background-size: contain;
 }
 
 body {
@@ -106,34 +106,36 @@ button {
   align-items: center;
   width: 100%;
   height: 100%;
-  .title {
-    width: fit-content;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    .solCounter {
-      color:rgba(255, 110, 5, 1);
-    }
-  }
+  gap: 2vh;
   .header {
+    margin: 1vh 0 1vh 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-  }
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: fit-content;
-    width: 20vw;
-    overflow: hidden;
-    .link {
-      cursor: pointer;
-      height: fit-content;
+    .title {
       width: fit-content;
-      .text {
-        text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      .solCounter {
+        color:rgba(255, 110, 5, 1);
+      }
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: fit-content;
+      width: 20vw;
+      overflow: hidden;
+      .link {
+        cursor: pointer;
+        height: fit-content;
+        width: fit-content;
+        .text {
+          text-align: center;
+        }
       }
     }
   }
@@ -143,6 +145,7 @@ button {
   display: flex;
   bottom: 0;
   width: 100%;
+  margin: 1vh 0 1vh 0;
   justify-content: center;
   align-items: center;
   .nasaLogo {
@@ -160,21 +163,23 @@ button {
   .intro {
     gap: 5vh;
     width: 100%;
+    height: 100%; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    height: 100%; 
     .info {
       display: flex;
       flex-direction: column;
       height: fit-content;
       gap: 2vh;
       justify-content: space-between;
+      .link {
+        width: fit-content;
+      }
     }
   } 
   .recentPhoto {
-    gap: 5vh;
     width: 100%;
     height: 100%; 
     display: flex;
@@ -182,14 +187,13 @@ button {
     justify-content: space-between;
     align-items: center;
     .photoContainer {
-      width: 100%;
-      height: 100%;
+      border-radius: 1vmax;
+      overflow: hidden;
+      object-fit: cover;
       .photo {
-        border-radius: 2vmax;
-        max-width:100%;
-        height:100%;
-        width: auto;
-        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        max-height: 60vh;
       }
     }
   }
@@ -206,9 +210,25 @@ button {
   .info {
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: column;
     gap: 5vh;
+  }
+  .rover {
+    gap: 2vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    .model {
+      border-radius:1vmax;
+      border: none;
+      overflow:hidden;
+      margin: 3vmax;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+    }
   }
 }
 
@@ -241,18 +261,14 @@ button {
     height: fit-content;
     justify-content: center;
     align-items: center;
-    .main {
-      width: 100%;
-      gap: 2vw;
-      height: fit-content;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      object-fit: fill;
+    .photoContainer {
+      border-radius: 1vmax;
+      overflow: hidden;
+      object-fit: cover;
       .photo {
-        z-index: 1;
-        height: 60vh;
-        border-radius: 2vmax;
+        width: 100%;
+        height: 100%;
+        max-height: 50vh;
       }
     }
     .picker {
@@ -260,46 +276,56 @@ button {
       flex-direction: column;
       width: 100%;
       height: fit-content;
-      border-radius: 2vmax;
+      border-radius: 1vmax;
       align-items: center;
       justify-content: center;
       object-fit: fill;
-      .photo {
-        height: 4vmax;
-        align-items: center;
-        justify-content: center;
-        border-radius: 20px;
+        .photo {
+          height: 4vmax;
+          align-items: center;
+          justify-content: center;
+          border-radius: 1vmax;
       }
+    }
+    .pagination {
+      display: flex;
+      gap: 1vw;
+      justify-content: center;
+      align-items: center;
     }
   }
   .galleryContainer {
     display: flex;
+    height: 100%;
+    width: 100%;
+    gap: 2vh;
     flex-direction: column;
     justify-content: center;
-    .main {
+    align-items: center;
+    .gallery {
+      width: 75%;
+      height: 100%;
       display: flex;
-      align-items: center;
       gap: 2vw;
       justify-content: center;
-      .gallery {
-        padding: 2vh 0 2vh 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 2vw;
-        flex-wrap: wrap;
-        background-color: rgba(116, 96, 96, 0.2);
-        border-radius: 2vmax;
-        .photo {
-          width: 7vh;
-          border-radius: 2vmax;
-        }
-      }    
-      .gallery > * {
-        flex: 0 0 18%;
+      align-items: center;
+      flex-wrap: wrap;
+      border-radius: 1vmax;
+      .photo {
+        width: 2vw;
+        border-radius: 1vmax;
       }
+    }    
+    .gallery > * {
+      flex: 0 0 15%;
+    }
+    .pagination {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      gap: 2vw;
+      justify-content: center;
+      align-items: center;
     }
   }
   .popoutContainer {
@@ -332,7 +358,7 @@ button {
       z-index: 20;
       background: rgb(116, 116, 116,0.2);
       border: none;
-      border-radius: 2vmax;
+      border-radius: 1vmax;
     }
   }
   .popoutContainer:hover {
@@ -345,7 +371,7 @@ button {
   overflow: hidden;
   width: 100%;
   height: 100%;
-  border-radius: 2vmax;
+  border-radius: 1vmax;
 }
 
 .loading {
@@ -366,22 +392,11 @@ button {
   width:10%;
   margin:-1vmax;
   margin-left:0;
-  border-radius: 20px;
+  border-radius: 1vmax;
   color: white;
   font-family: 'PT Sans Narrow', sans-serif;
   font-weight: bold;
 }
 .btnReset:active {
   background: rgb(131, 131, 131);
-}
-
-/* Rover 3D model */
-.rover {
-  display: block;
-  border-radius:20px;
-  border: none;
-  overflow:hidden;
-  margin: 3vmax;
-  width: 35vmax;
-  height: 27vmax;
 }

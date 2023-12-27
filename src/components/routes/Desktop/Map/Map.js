@@ -4,7 +4,7 @@ import MarsMap from '../components/MarsMap'
 const Map = () => {
   return (
     <div className='mapContainer'>
-      <MarsMap height={'90%'} width={'80%'}/>
+      <MarsMap height={'100%'} width={'100%'}/>
     </div>
   )
 }
