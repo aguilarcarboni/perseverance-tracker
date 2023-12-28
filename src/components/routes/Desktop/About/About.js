@@ -12,7 +12,7 @@ const About = () => {
       </div>
       <div className='rover'>
         <h2 className='title'>3D Model</h2>
-        <iframe className ='model' src="https://mars.nasa.gov/gltf_embed/25042" title='3D Model'/>
+        <iframe className ='model' allowtransparency="true" src="https://mars.nasa.gov/gltf_embed/25042" title='3D Model' height={'100%'} width={'100%'}/>
       </div>
     </div>
   )
