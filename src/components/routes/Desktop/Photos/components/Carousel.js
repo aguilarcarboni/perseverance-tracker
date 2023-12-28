@@ -49,7 +49,7 @@ const Carousel = () => {
     return (
       <div className='carouselContainer'>
         <div className='photoContainer'>
-          <img className='photo' src={data[index]} alt='Most recent'/> 
+          <img className='photo' src={data[index]} alt='Image'/> 
         </div>
         <div className='picker'>
           <div className='photos'>

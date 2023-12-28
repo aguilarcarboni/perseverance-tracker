@@ -11,7 +11,7 @@ const Photos = () => {
       <div className='photosContainer'>
         <Toggler onClick = {() => setShowCarroussel(!showCarroussel)} showCarroussel = {showCarroussel}/>
         {showCarroussel ? <Carousel/>:<Gallery/>}
-        </div>
+      </div>
     )
 }
 
