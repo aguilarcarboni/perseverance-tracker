@@ -148,9 +148,10 @@ button {
   margin: 1vh 0 1vh 0;
   justify-content: center;
   align-items: center;
-  .nasaLogo {
-    width: 3vw;
-  }
+}
+
+.footer .nasaLogo {
+  width: 3vw;
 }
 
 .homeContainer {
@@ -245,13 +246,15 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  .toggler {
+}
+  .photosContainer .toggler {
     width: 100%;
     height: fit-content;
     display: flex;
     justify-content: flex-end;
   }
-  .carouselContainer {
+
+  .photosContainer .carouselContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -259,42 +262,44 @@ button {
     height: fit-content;
     justify-content: center;
     align-items: center;
-    .photoContainer {
+  }
+    .photosContainer .carouselContainer .photoContainer {
       display: flex;
       border-radius: 1vmax;
       overflow: hidden;
       object-fit: cover;
-      .photo {
+    }
+      .photosContainer .carouselContainer .photoContainer .photo {
         width: 100%;
         height: 100%;
         max-height: 50vh;
       }
+
+    .photosContainer .carouselContainer .picker {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: fit-content;
+        border-radius: 1vmax;
+        align-items: center;
+        justify-content: center;
+        object-fit: fill;
     }
-    .picker {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      height: fit-content;
-      border-radius: 1vmax;
-      align-items: center;
-      justify-content: center;
-      object-fit: fill;
-      .photo {
+      .photosContainer .carouselContainer .picker .photo {
         height: 4vmax;
         align-items: center;
         justify-content: center;
         border-radius: 1vmax;
       } 
-      .pagination {
+      .photosContainer .carouselContainer .picker .pagination {
         display: flex;
         width: 100%;
         gap: 1vw;
         justify-content: center;
         align-items: center;
       }
-    }
-  }
-  .galleryContainer {
+
+  .photosContainer .galleryContainer {
     display: flex;
     height: 100%;
     width: 100%;
@@ -302,21 +307,22 @@ button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    .gallery {
+  }
+    .photosContainer .galleryContainer .gallery {
       width: fit-content;
       height: 100%;
       display: grid;
       gap: 0.5vh 3vw;
       grid-template-columns: repeat(3, 10vw);
       border-radius: 1vmax;
-      .photo {
+    }
+      .photosContainer .galleryContainer .gallery .photo {
         width: 100%;
         height: auto;
         max-height: 15vh;
         border-radius: 1vmax;
       }
-    }
-    .pagination {
+    .photosContainer .galleryContainer .pagination {
       width: 100%;
       height: 100%;
       display: flex;
@@ -324,44 +330,42 @@ button {
       justify-content: center;
       align-items: center;
     }
-  }
-  .popoutContainer {
-    z-index: 10;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.5);
-    .popout {
-      z-index: 12;
-      height: fit-content;
-      width: fit-content;
-      .photo {
+    .photosContainer .galleryContainer .popoutContainer {
+      z-index: 10;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+      .photosContainer .galleryContainer .popoutContainer .popout {
+        z-index: 12;
+        height: fit-content;
+        width: fit-content;
+      }
+        .photosContainer .galleryContainer .popoutContainer .popout:hover {
+          cursor: default;
+        }
+      .photosContainer .galleryContainer .popoutContainer .photo {
         z-index: 15;
         width: 80vh;
       }
-    }
-    .popout:hover {
-      cursor: default;
-    }
-    .exitButton {
-      z-index: 20;
-      background: rgb(116, 116, 116,0.2);
-      border: none;
-      border-radius: 1vmax;
-    }
-  }
-  .popoutContainer:hover {
+      .photosContainer .galleryContainer .popoutContainer .exitButton {
+        z-index: 20;
+        background: rgb(116, 116, 116,0.2);
+        border: none;
+        border-radius: 1vmax;
+      }
+  .photosContainer .galleryContainer .popoutContainer:hover {
     cursor: pointer;
   }
-}
 
 .map {
   z-index: 1;
