@@ -260,10 +260,12 @@ button {
     justify-content: center;
     align-items: center;
     .photoContainer {
+      display: flex;
       border-radius: 1vmax;
       overflow: hidden;
       object-fit: cover;
       .photo {
+        display: flex;
         width: 100%;
         height: 100%;
         max-height: 50vh;
@@ -285,7 +287,7 @@ button {
           border-radius: 1vmax;
       }
     }
-    .pagination {
+    & .pagination {
       display: flex;
       gap: 1vw;
       justify-content: center;
@@ -303,10 +305,7 @@ button {
     .gallery {
       width: fit-content;
       height: 100%;
-      display: grid;
-      gap: 0.5vh 3vw;
-      grid-template-columns: repeat(3, 10vw);
-      border-radius: 1vmax;
+      display: flex;
       .photo {
         width: 100%;
         height: auto;
@@ -314,7 +313,7 @@ button {
         border-radius: 1vmax;
       }
     }
-    .pagination {
+    & .pagination {
       width: 100%;
       height: 100%;
       display: flex;
