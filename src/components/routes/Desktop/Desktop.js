@@ -14,27 +14,31 @@ import Footer from './components/Footer'
 
 const Desktop = () => {
   const state = routeTypes.DESKTOP
+
+  const currentPath = '/d/'
+  window.history.replaceState(null, "", currentPath)
+  
   return (
-  <BrowserRouter>
-    <div className='header'>
-      <div className='title'>
-        <Link to='/d/' className='link'>
-          <h1> 
-            Perseverance Tracker
-          </h1>
-        </Link>
-        <SolCounter />
+    <BrowserRouter>
+      <div className='header'>
+        <div className='title'>
+          <Link to='/d/' className='link'>
+            <h1> 
+              Perseverance Tracker
+            </h1>
+          </Link>
+          <SolCounter />
+        </div>
+        <Navbar state={state}/>
       </div>
-      <Navbar state={state}/>
-    </div>
-    <Routes>
-      <Route path='/d/' element={<Home />} />
-      <Route path='/d/about' element={<About />} />
-      <Route path='/d/map' element={<Map />} />
-      <Route path='/d/photos' element={<Photos />} />
-    </Routes>
-    <Footer/>
-  </BrowserRouter>
+      <Routes>
+        <Route path='/d/' element={<Home />} />
+        <Route path='/d/about' element={<About />} />
+        <Route path='/d/map' element={<Map />} />
+        <Route path='/d/photos' element={<Photos />} />
+      </Routes>
+      <Footer/>
+    </BrowserRouter>
   )
 }
 
