@@ -12,6 +12,10 @@ function App() {
     window.addEventListener("resize", () => setWidth(window.innerWidth));
   }, []);
 
+  const currentPath = window.location.pathname
+  const newPath = height <= width ? currentPath.replace('/m/', '/d/'):currentPath.replace('/d/', '/m/')
+  window.history.replaceState(null, "", newPath)
+  
   return (
     <div className='container'>
       {height <= width ? <Desktop />:<h1>{height} {width}</h1>}
