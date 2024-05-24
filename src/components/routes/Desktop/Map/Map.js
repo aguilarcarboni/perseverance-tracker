@@ -1,5 +1,5 @@
 import React from 'react'
-import MarsMap from '../components/MarsMap'
+import MarsMap from '../misc/MarsMap'
 
 const Map = () => {
   return (

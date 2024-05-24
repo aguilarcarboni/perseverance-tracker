@@ -14,7 +14,7 @@
     "papaparse": "^5.3.2",
     "pigeon-maps": "^0.21.0",
     "react": "^17.0.2",
-    "react-bootstrap-icons": "^1.10.3",
+    "react-bootstrap-icons": "^1.11.4",
     "react-chartjs-2": "^4.1.0",
     "react-dom": "^17.0.2",
     "react-image-zoom-pan": "^0.3.1",

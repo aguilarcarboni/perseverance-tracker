@@ -2,8 +2,8 @@ import React from "react"
 
 import useFetch from "../../../../../hooks/useFetch"
 import { fetchTypes } from "../../../../../utils/types.ts"
-import LoadingComponent from "../../components/LoadingComponent.js"
-import ErrorComponent from "../../components/ErrorComponent.js"
+import LoadingComponent from "../../misc/LoadingComponent.js"
+import ErrorComponent from "../../misc/ErrorComponent.js"
 
 const MostRecentPhoto = () => {
   const {data, loading, error} = useFetch(fetchTypes.IMAGES)

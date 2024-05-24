@@ -5,6 +5,7 @@ import useFetch from "../../../../hooks/useFetch.js"
 import { fetchTypes } from "../../../../utils/types.ts"
 
 import { Map, Marker, ZoomControl } from "pigeon-maps"
+import { Crosshair } from 'react-bootstrap-icons'
 
 const MarsMap = ({width, height}) => {
 
@@ -12,7 +13,7 @@ const MarsMap = ({width, height}) => {
   
   const [center, setCenter] = useState([18.445, 77.44])
   const [zoom, setZoom] = useState(5)
-  const maxZoom = 15
+  const maxZoom = 20
   const minZoom = 3
 
   function mapTiler (x, y, z) {
@@ -23,6 +24,12 @@ const MarsMap = ({width, height}) => {
     setCenter([18.445, 77.44])
     setZoom(12)
   }
+
+  function zoomOut () {
+    setCenter([18.445, 77.44])
+    setZoom(3)
+  }
+
   return (
     <div className='map' style={{width:width, height:height}} >
       <Map 
@@ -37,10 +44,14 @@ const MarsMap = ({width, height}) => {
         {!loading && !error && data && data.map((coord,index) => 
           <Marker key={index} width={5} anchor={[coord['lat'], coord['lon']]} onClick={() => console.log(coord)}/>
         )}
-        <ZoomControl />
-        <button className='btnReset' onClick={resetView}>
-          <p>Go to perse!</p>
-        </button>
+        <div className='zoomButtons'>
+          <button className='resetZoomButton' onClick={resetView}>
+            <Crosshair size={'60%'} color='black'/>
+          </button>
+          <button className='resetZoomButton' onClick={zoomOut}>
+            <Crosshair size={'60%'} color='black'/>
+          </button>
+        </div>
       </Map>
     </div>
   )

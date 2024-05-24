@@ -3,16 +3,17 @@ import { BrowserRouter, Routes,Route,Link } from 'react-router-dom'
 
 import {routeTypes} from '../../../utils/types.ts'
 
-import Navbar from './components/Navbar'
-import SolCounter from './components/SolCounter'
+import Navbar from './Navbar.js'
+import SolCounter from './misc/SolCounter.js'
 
 import Home from './Home/Home'
-import About from './About/About'
-import Map from './Map/Map'
+import About from './about/About.js'
+import Map from './map/Map.js'
 import Photos from './Photos/Photos'
-import Footer from './components/Footer'
+import Footer from './Footer.js'
 
 const Desktop = () => {
+
   const state = routeTypes.DESKTOP
 
   const currentPath = '/d/'

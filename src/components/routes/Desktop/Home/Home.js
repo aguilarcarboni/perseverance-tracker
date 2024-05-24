@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import MarsMap from '../components/MarsMap';
+import MarsMap from '../misc/MarsMap';
 import MostRecentPhoto from './components/MostRecentPhoto';
 
 const Home = () => {
