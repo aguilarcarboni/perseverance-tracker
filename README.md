@@ -1,6 +1,6 @@
 # Perseverance Tracker
 
-## CS1330: Computational Thinking with Data Science
+## Computational Thinking with Data Science
 
 ### Description
 
