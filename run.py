@@ -45,7 +45,6 @@ def getDistance(coordsJson):
 #Main
 manifestUrl = 'https://api.nasa.gov/mars-photos/api/v1/manifests/perseverance/?api_key=kQwoyoXi4rQeY0lXWt1RZln6mLeatlYKLmYfGENB'
 manifest = getManifestData(manifestUrl)
-
 sol = getSol(manifest)
 
 imagesUrl = 'https://api.nasa.gov/mars-photos/api/v1/rovers/perseverance/photos?sol='+ str(sol) + '&api_key=kQwoyoXi4rQeY0lXWt1RZln6mLeatlYKLmYfGENB'
@@ -58,12 +57,4 @@ data = {
     'images': images,
     'coords': coordinates
 }
-
-app = Flask(__name__)
-cors = CORS(app)
-app.config['CORS_HEADERS'] = 'Content-Type'
-
-@app.route("/")
-@cross_origin()
-def root():
-    return data
+print(data)
