@@ -1,8 +1,8 @@
 import React, { useState }  from 'react'
 
-import useFetch from "../../../../hooks/useFetch.js"
+import useFetch from "../../hooks/useFetch.js"
 
-import { fetchTypes } from "../../../../utils/types.ts"
+import { fetchTypes } from "../../utils/types.ts"
 
 import { Map, Marker, ZoomControl } from "pigeon-maps"
 import { Crosshair } from 'react-bootstrap-icons'

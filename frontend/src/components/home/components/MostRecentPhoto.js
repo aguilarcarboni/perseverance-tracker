@@ -1,7 +1,7 @@
 import React from "react"
 
-import useFetch from "../../../../../hooks/useFetch"
-import { fetchTypes } from "../../../../../utils/types.ts"
+import useFetch from "../../../hooks/useFetch.js"
+import { fetchTypes } from "../../../utils/types.ts"
 import LoadingComponent from "../../misc/LoadingComponent.js"
 import ErrorComponent from "../../misc/ErrorComponent.js"
 

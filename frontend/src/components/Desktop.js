@@ -1,15 +1,15 @@
 import React from 'react'
 import { BrowserRouter, Routes,Route,Link } from 'react-router-dom'
 
-import {routeTypes} from '../../../utils/types.ts'
+import {routeTypes} from '../utils/types.ts'
 
 import Navbar from './Navbar.js'
 import SolCounter from './misc/SolCounter.js'
 
-import Home from './Home/Home'
+import Home from './home/Home.js'
 import About from './about/About.js'
 import Map from './map/Map.js'
-import Photos from './Photos/Photos'
+import Photos from './photos/Photos.js'
 import Footer from './Footer.js'
 
 const Desktop = () => {

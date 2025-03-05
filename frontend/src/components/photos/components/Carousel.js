@@ -1,13 +1,13 @@
 import React from 'react'
 import { useState } from 'react';
 
-import useFetch from '../../../../../hooks/useFetch'
+import useFetch from '../../../hooks/useFetch.js'
 import LoadingComponent from '../../misc/LoadingComponent.js';
 import ErrorComponent from '../../misc/ErrorComponent.js';
 
-import { fetchTypes } from '../../../../../utils/types.ts';
+import { fetchTypes } from '../../../utils/types.ts';
 
-import ArrowButton from '../../../../Inner-components/ArrowButton';
+import ArrowButton from '../../misc/ArrowButton.js';
 
 const Carousel = () => {
 

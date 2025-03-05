@@ -1,10 +1,10 @@
 import React from 'react'
 
-import useFetch from '../../../../hooks/useFetch.js'
+import useFetch from '../../hooks/useFetch.js'
 import LoadingComponent from './LoadingComponent.js';
 import ErrorComponent from './ErrorComponent.js';
 
-import { fetchTypes } from '../../../../utils/types.ts';
+import { fetchTypes } from '../../utils/types.ts';
 
 const SolCounter = () => {
   const {data, loading, error} = useFetch(fetchTypes.COORDS)
