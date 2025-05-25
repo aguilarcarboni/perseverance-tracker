@@ -23,6 +23,6 @@ python mars_dashboard.py
 ```
 
 ### Results 
-- Scored a 110% on the project
+- Scored a 110% in the project
 
 ### created by [@aguilarcarboni](https://github.com/aguilarcarboni/)
