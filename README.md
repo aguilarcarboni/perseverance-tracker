@@ -18,9 +18,7 @@ cd perseverance-tracker
 pip install -r requirements.txt
 ```
 
-## Usage
-```
-2. Run the dashboard:
+3. Running
 ```bash
 python mars_dashboard.py
 ```
